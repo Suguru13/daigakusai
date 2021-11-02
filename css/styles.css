@@ -86,7 +86,7 @@ nav {
 .main-section > h1 { 
     padding: 40px 90px;
     color: #141E61;
-    font-size: 16px; 
+    font-size: 20px; 
 }
 
 .message { /*Popupのためのスタイリング*/
@@ -100,7 +100,7 @@ nav {
     right: 10px; 
     bottom: 32px;
     text-align: center;
-    font-size: 10px;
+    font-size: 13px;
 
 
     animation: popup 3.5s forwards;
@@ -199,7 +199,11 @@ footer {
     }
 
     header h1 { 
-        font-size: 32px;    
+        font-size: 28px;    
+    }
+
+    header h2 { 
+        font-size: 24px;
     }
 
     .main-section > h1 { 
@@ -246,8 +250,12 @@ footer {
     .videoblock:nth-child(even) { 
         flex-direction: row-reverse;
     }
-    
-    header h2 {
+
+    header h1 { 
+        font-size: 32px;    
+    }
+
+    header h2 { 
         font-size: 28px;
     }
     
