@@ -17,6 +17,7 @@ p {
     font-size: 10px;
     text-align: center;
     margin: 16px 10px;
+    opacity: 0.6;
 }
 
 .container { 
