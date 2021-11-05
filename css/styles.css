@@ -83,7 +83,7 @@ nav {
     object-fit: cover;
 } 
 
-.main-section > h1 { 
+.section > h1 { 
     padding: 40px 90px;
     color: #141E61;
     font-size: 16px; 
@@ -127,7 +127,7 @@ nav {
 }
 
 .videoblock {
-    margin: 60px 0px;
+    margin: 70px 0px;
     opacity: 0; 
     transition: transform 1s, opacity .5s;
     transform: translateY(20px);
@@ -155,6 +155,12 @@ nav {
     transform: none;
 }
 
+.section > h1 { 
+    padding: 40px 90px;
+    color: #141E61;
+    font-size: 16px; 
+}
+
 
 
 /* Footer */
@@ -174,7 +180,7 @@ footer {
 @media (min-width: 700px) { 
 
     .videoblock {
-        margin: 50px 20px;
+        margin: 80px 20px;
         opacity: 0; 
         transition: transform 1s, opacity .5s;
         /* transform: translateX(40px); */
@@ -183,14 +189,16 @@ footer {
         align-items: center;
     }
 
+    
+
     .btn {
         font-size: 18px; 
     }
 
 
     .videoblock dl { 
-        margin: 50px 0px;
-        font-size: 14px;
+        margin: 60px 0px;
+        font-size: 20px;
     }
 
     iframe { 
@@ -206,8 +214,8 @@ footer {
         font-size: 24px;
     }
 
-    .main-section > h1 { 
-        font-size: 23px; 
+    .section > h1 { 
+        font-size: 28px; 
     }
 
     .message { 
@@ -230,6 +238,13 @@ footer {
         margin-right: 30px;
     }
 
+    .third-section .videoblock{ 
+        flex-direction: column;
+    }
+
+
+
+
 
 
 /* large screen */
@@ -250,6 +265,16 @@ footer {
     .videoblock:nth-child(even) { 
         flex-direction: row-reverse;
     }
+
+    .third-section .videoblock:nth-child(even) { 
+        flex-direction: column;
+    }
+
+    #hardware .third-section { 
+        display : flex;
+        justify-content: space-around;
+    }
+
 
     header h1 { 
         font-size: 32px;    
