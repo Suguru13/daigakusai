@@ -13,6 +13,12 @@ img {
     /* 画像はデフォルトでベースラインを元に配置されるつまり画像の下の隙間を消すため */
 }
 
+p { 
+    font-size: 10px;
+    text-align: center;
+    margin: 16px 10px;
+}
+
 .container { 
     margin: 0 16px;
 }
@@ -241,6 +247,7 @@ footer {
     .third-section .videoblock{ 
         flex-direction: column;
     }
+
 
 
 
