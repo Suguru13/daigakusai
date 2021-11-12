@@ -110,7 +110,7 @@ nav {
     font-size: 13px;
 
 
-    animation: popup 3.5s forwards;
+    animation: popup 5s forwards;
     /* forwardをつけると最後の時点でとどまる */
 }
 
