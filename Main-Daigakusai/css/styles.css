@@ -1,0 +1,301 @@
+/* common */
+
+body { 
+    margin: 0;
+}
+
+h1, h2 { 
+    margin: 0;
+}
+
+img { 
+    vertical-align: bottom;
+    /* 画像はデフォルトでベースラインを元に配置されるつまり画像の下の隙間を消すため */
+}
+
+p { 
+    font-size: 10px;
+    text-align: center;
+    margin: 16px 10px;
+    opacity: 0.6;
+}
+
+.container { 
+    margin: 0 16px;
+}
+
+/* header */
+
+header { 
+    background: #112031;;
+    padding: 8px 0;
+    /* 最初の値は上下、2番目は左右を示す */
+}
+
+header .container { 
+    display: flex;
+    align-items: center;
+    /* 縦方向に中央揃え */
+    justify-content: space-around;
+    /* ブラウザを広げるとブラウザ幅に応じて適当なスペイスを開ける */
+}
+
+header h1, 
+header h2 {
+    text-align: center;
+    align-items: center;
+    /* font-size: 23px; */
+    color: #B8DFF0; 
+}
+
+header h2 { 
+    color: #69DADB;
+}
+
+header .header-text { 
+    margin-left: 5px;
+    font-size: 9px;
+}
+
+.btn { 
+    text-decoration: none; 
+    color: #112031;
+    /* display: inline-block;  */
+    width: 200px; 
+    line-height: 35px;
+    /* btnクラスがついているaタグに対して位置付けるには左右上下の余白を設定する必要があり、marginプロパティを利用する */
+    /* 正方形の角を丸めるには使う */
+    font-size: 13px; 
+    text-align: center;
+    transition: background .5s;
+
+}
+
+.btn:hover { 
+    background: #9BA4B4;
+}
+
+nav {
+    display: flex;
+    /* navプロパティですが、ブラウザが標準でblockの値がついているため、Flexにする必要がある */
+    justify-content: space-between;
+    /* positionプロパティの初期値であるstaticの位置からどれほでズラすかを指定する */
+    background: #E1E8EB;
+    
+}
+
+.body1 { /*Main picture*/
+    width: 100%; 
+    height: 375px;
+    object-fit: cover;
+} 
+
+.section > h1 { 
+    padding: 40px 90px;
+    color: #141E61;
+    font-size: 16px; 
+}
+
+.message { /*Popupのためのスタイリング*/
+    width: 300px;
+    padding: 8px 16px;
+    background: #00818A;
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+    position: fixed;
+    right: 10px; 
+    bottom: 32px;
+    text-align: center;
+    font-size: 13px;
+
+
+    animation: popup 5s forwards;
+    /* forwardをつけると最後の時点でとどまる */
+}
+
+@keyframes popup { 
+    0% {
+        transform: translateY(20px);
+        opacity: 0; 
+    }
+    20% {
+        transform: none;
+        opacity: 1; 
+    }
+    80% {
+        transform: none;
+        opacity: 1; 
+    }
+    100% {
+        transform: translateY(20px);
+        opacity: 0; 
+    }
+}
+
+.videoblock {
+    margin: 70px 0px;
+    opacity: 0; 
+    transition: transform 1s, opacity .5s;
+    transform: translateY(20px);
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+.videoblock dl { 
+    font-size: 10px;
+    margin-top: 30px;
+}
+
+
+/* .videoblock.side-from-left { 
+    transform: translateX(-40px);
+}
+
+.videoblock.side-from-right { 
+    transform: translateX(40px);
+} */
+
+.videoblock.appear { 
+    opacity: 1; 
+    transform: none;
+}
+
+.section > h1 { 
+    padding: 40px 90px;
+    color: #141E61;
+    font-size: 16px; 
+}
+
+
+
+/* Footer */
+footer { 
+    height: 100px; 
+    background: #112031;
+    color: #B8DFF0;
+    text-align: center;
+    line-height: 100px;
+    font-size: 10px;
+    /* footerの高さと行の高さを同じ値にすることで */
+}
+
+
+/* medium screen */
+
+@media (min-width: 700px) { 
+
+    .videoblock {
+        margin: 80px 20px;
+        opacity: 0; 
+        transition: transform 1s, opacity .5s;
+        /* transform: translateX(40px); */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+
+    .btn {
+        font-size: 18px; 
+    }
+
+
+    .videoblock dl { 
+        margin: 60px 0px;
+        font-size: 20px;
+    }
+
+    iframe { 
+        width: 600px; 
+        height: 400px;
+    }
+
+    header h1 { 
+        font-size: 28px;    
+    }
+
+    header h2 { 
+        font-size: 24px;
+    }
+
+    .section > h1 { 
+        font-size: 28px; 
+    }
+
+    .message { 
+        width: 400px;
+        position: fixed;
+        right: 32px; 
+        bottom: 32px;
+        font-size: 16px;
+    }
+
+    footer { 
+        font-size: 16px;
+    }
+
+    nav {
+        justify-content: flex-end; 
+    }
+    
+    nav a {
+        margin-right: 30px;
+    }
+
+    .third-section .videoblock{ 
+        flex-direction: column;
+    }
+
+
+
+
+
+
+
+/* large screen */
+@media (min-width: 1000px) {
+
+    .videoblock {
+        /* transform: translateX(40px); */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .videoblock dl { 
+        margin: 50px 30px;
+        font-size: 18px;
+    }
+
+    .videoblock:nth-child(even) { 
+        flex-direction: row-reverse;
+    }
+
+    .third-section .videoblock:nth-child(even) { 
+        flex-direction: column;
+    }
+
+    #hardware .third-section { 
+        display : flex;
+        justify-content: space-around;
+    }
+
+
+    header h1 { 
+        font-size: 32px;    
+    }
+
+    header h2 { 
+        font-size: 28px;
+    }
+    
+    }
+
+
+
+
+}
+
